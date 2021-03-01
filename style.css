@@ -1,0 +1,121 @@
+/* how to Read and write selectors? 
+*Selectors write from left to right
+*Selectors read from right to left
+*Example: p a{ color: red;} style the a tag that descendant of the p tag.
+*Copyright:Abid Hasan.
+*/
+
+
+/* Group selector (Select all element for same style)*/
+
+/* h1,h2,h3{
+    font-weight: normal;
+    border: 2px solid red;
+
+} */
+
+/* Compound Selectors (Selecting same class for different style for different element) */
+
+/* p.myclass {
+    color:red;
+}
+
+ul.myclass{
+    color: blue;
+}
+p#myid {
+    background-color: blueviolet;
+    color: aliceblue;
+} */
+
+/* Descendant Selectors */
+
+/* p a{
+    color: red;
+}
+ul a{
+    color:orange;
+} */
+
+
+/* parent-Child Selectors */
+
+
+/* article > p {
+    color:red;
+}
+
+aside p > strong{
+    color:blueviolet;
+} */
+
+
+/* Sibling Selectors */
+ /* Select all p tag that sibling of h1*/
+ /* h1~p {
+    color: red; 
+} */
+/* Select only p tag that sibling of  aside  */
+/* aside+p{ 
+    color: blue;
+}  */
+
+
+ /* attribute Selectors */
+ /* a[title]{
+    color: red;
+}
+
+
+[title="first"]{
+    color: red;
+}
+
+[title~="first"]{
+    color: blue;
+}
+
+[title="fifth"]{
+    color: brown;
+}
+[title~="fifth"]{
+    color: green;
+} */
+
+
+/* Begining,Ending  and arbitrary substring attribute selectors */
+
+[title^="fi"]{
+    color: blueviolet;  
+}
+
+[title$="th"]{
+    border: 1px solid blue;
+}
+
+[title*="fi"]{
+    background-color: beige;
+}
+
+a[href*=".pdf"]::after{
+    content: "(pdf)";
+}
+
+/* Pseudu classes */
+
+a:link{
+  color: blue;
+}
+a:visited{
+  color: blueviolet;
+}
+a:hover{
+  text-decoration: none;
+}
+a:focus{
+
+}
+
+a:active{
+  color: red;
+}
